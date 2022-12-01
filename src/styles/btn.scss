@@ -6,9 +6,14 @@
     line-height: 24px;
     padding: 12px 40px;
     border-radius:44px;
+    transition: 300ms ease all;
 
     &__solid {
         background-color: $blue;
+
+        &:hover {
+            background-color: $black;
+        }
     }
 
     &__transparent {

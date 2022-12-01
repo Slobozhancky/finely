@@ -48,14 +48,15 @@ module.exports = (env, args) => {
             main: "./index.js",
         },
         resolve: {
-            alias: {
-                images: path.resolve(__dirname, "src/assets/images"),
-            },
+            // alias: {
+            //     images: path.resolve(__dirname, "src/assets/images"),
+            // },
             extensions: [".tsx", ".ts", ".js"],
         },
         output: {
             filename: filename("js"),
             path: path.resolve(__dirname, "dist"),
+            // publicPath: "/finely/",
             clean: true,
         },
         plugins: [
@@ -86,10 +87,16 @@ module.exports = (env, args) => {
                 {
                     test: /\.(png|svg|jpg|jpeg|gif)$/i,
                     type: "asset/resource",
+                    generator: {
+                        filename: `assets/images/[name][ext]`,
+                    },
                 },
                 {
                     test: /\.(woff|woff2|eot|ttf|otf)$/i,
                     type: "asset/resource",
+                    generator: {
+                        filename: `assets/fonts/[name].[contenthash][ext]`,
+                    },
                 },
                 {
                     test: /\.m?js$/,
