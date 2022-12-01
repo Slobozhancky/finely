@@ -1,0 +1,63 @@
+@import "./fonts.css";
+@import "normalize.css";
+@import "./variables.scss";
+@import "./btn.scss";
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: $black;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.header {
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 0;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            a {
+                color: $black;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 20px;
+                padding: 0 20px;
+                transition: 300ms ease all;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
+
+nav {
+}
