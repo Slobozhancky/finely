@@ -32,6 +32,9 @@ body {
 }
 
 .header {
+
+    margin-bottom: 75px;
+
     &-wrapper {
         display: flex;
         justify-content: space-between;
@@ -59,5 +62,38 @@ body {
     }
 }
 
-nav {
+.hero-section {
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            font-weight: 600;
+            font-size: 80px;
+            line-height: 92px;
+        }
+
+        .description {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: $gray;
+            margin-bottom: 50px;
+            width: 482px;
+        }
+
+        .btn-wrapper {
+            display: flex;
+
+            a.btn {
+                text-align: center;
+                width: 220px;
+            }
+
+            a.btn:nth-child(2) {
+                margin-left: 16px;
+            }
+            
+        }
+    }
 }

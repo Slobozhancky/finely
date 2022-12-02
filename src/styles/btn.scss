@@ -6,6 +6,7 @@
     line-height: 24px;
     padding: 12px 40px;
     border-radius:44px;
+    cursor: pointer;
     transition: 300ms ease all;
 
     &__solid {
@@ -17,8 +18,18 @@
     }
 
     &__transparent {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
         color: $black;
         border: 3px solid $black;
         background-color: transparent;
+
+        &:hover {
+            background-color: $blue;
+            border: 3px solid $blue;
+            color: white;
+        }
     }
 }
