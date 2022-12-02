@@ -32,7 +32,6 @@ body {
 }
 
 .header {
-
     margin-bottom: 75px;
 
     &-wrapper {
@@ -66,6 +65,7 @@ body {
     &-wrapper {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 80px;
 
         h1 {
             font-weight: 600;
@@ -93,7 +93,33 @@ body {
             a.btn:nth-child(2) {
                 margin-left: 16px;
             }
-            
+        }
+
+        .col:nth-child(2) {
+            img {
+                min-width: 536px;
+            }
+        }
+    }
+
+    .partners {
+        background-color: $black;
+        padding: 40px 0;
+
+        .list {
+            display: flex;
+
+            &-item {
+                margin: 0 50px;
+            }
+
+            &-item:first-child {
+                margin-left: 0;
+            }
+
+            &-item:last-child {
+                margin-right: 0;
+            }
         }
     }
 }
