@@ -48,9 +48,9 @@ module.exports = (env, args) => {
             main: "./index.js",
         },
         resolve: {
-            // alias: {
-            //     images: path.resolve(__dirname, "src/assets/images"),
-            // },
+            alias: {
+                images: path.resolve(__dirname, "src/assets/images"),
+            },
             extensions: [".tsx", ".ts", ".js"],
         },
         output: {

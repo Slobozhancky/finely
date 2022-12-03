@@ -24,6 +24,11 @@ body {
     color: $black;
 }
 
+.finely-wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 .container {
     max-width: 1200px;
     width: 100%;
@@ -62,15 +67,19 @@ body {
 }
 
 .hero-section {
-    &-wrapper {
+    margin-bottom: 190px;
+
+    .row {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 80px;
+        margin-bottom: 60px;
 
         h1 {
             font-weight: 600;
             font-size: 80px;
             line-height: 92px;
+            margin-top: 10px;
+            margin-bottom: 25px;
         }
 
         .description {
@@ -119,6 +128,134 @@ body {
 
             &-item:last-child {
                 margin-right: 0;
+            }
+        }
+    }
+}
+
+.features {
+    .row {
+        display: flex;
+        justify-content: space-between;
+        .col {
+            width: 45%;
+
+            h4 {
+                color: $middle-gray;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                width: 472px;
+                font-weight: 600;
+                font-size: 52px;
+                line-height: 72px;
+                margin-bottom: 35px;
+            }
+
+            .description {
+                color: $gray;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 28px;
+                width: 387px;
+                margin-bottom: 25px;
+            }
+
+            .benefit {
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 15px;
+            }
+
+            .benefit::before {
+                display: block;
+                content: url("../assets/images/cross.png");
+                margin-right: 16px;
+                margin-top: 10px;
+            }
+        }
+
+        .col:nth-child(2) {
+            width: 54%;
+            .backing {
+                height: 670px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: relative;
+                right: -140px;
+                bottom: 75px;
+
+                .phone {
+                    height: 605px;
+                    width: 470px;
+                    background-image: url("../assets/images/reg_phone.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    z-index: 2;
+                    left: -45px;
+                    top: 20px;
+                }
+            }
+
+            .backing::after {
+                display: block;
+                content: url("../assets/images/reg_backing.jpg");
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    .row:nth-child(2) {
+        .col {
+            width: auto;
+
+            .backing {
+                height: 670px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: relative;
+                bottom: 115px;
+                left: -150px;
+
+                .phone {
+                    height: 605px;
+                    width: 470px;
+                    background-image: url("../assets/images/accessible_phone.png");
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    position: absolute;
+                    z-index: 2;
+                    top: 30px;
+                    right: -50px;
+                }
+            }
+
+            .backing::after {
+                display: block;
+                content: url("../assets/images/accessible_backing.jpg");
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .col:nth-child(2) {
+            width: 40%;
+
+            h3.title {
+                width: 410px;
+                margin-right: 0;
+                margin-top: 30px;
             }
         }
     }
